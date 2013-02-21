@@ -9,7 +9,7 @@ object ApplicationBuild extends Build {
     "Mandubian repository releases" at "https://github.com/mandubian/mandubian-mvn/raw/master/releases/"
   )
 
-  lazy val play-json-alone = Project(
+  lazy val playJsonAlone = Project(
     BuildSettings.buildName, file("."),
     settings = BuildSettings.buildSettings ++ Seq(
       resolvers ++= mandubianRepo,
