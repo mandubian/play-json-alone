@@ -10,7 +10,7 @@ object ApplicationBuild extends Build {
   )
 
   lazy val playJsonAlone = Project(
-    BuildSettings.buildName, file("."),
+    "play-json-alone", file("."),
     settings = BuildSettings.buildSettings ++ Seq(
       resolvers ++= mandubianRepo,
       libraryDependencies ++= Seq(
