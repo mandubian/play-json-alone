@@ -1,7 +1,6 @@
 import sbt._
 import Keys._
 
-
 object ApplicationBuild extends Build {
 
   val mandubianRepo = Seq(
@@ -11,8 +10,9 @@ object ApplicationBuild extends Build {
 
   lazy val playJsonAlone = Project(
     "play-json-alone", file("."),
-    settings = BuildSettings.buildSettings ++ Seq(
+    settings = Defaults.defaultSettings ++ Seq(
       resolvers ++= mandubianRepo,
+      scalaVersion := "2.10.0",
       libraryDependencies ++= Seq(
         "play"        %% "play-json" % "2.2-SNAPSHOT",
         "org.specs2"  %% "specs2" % "1.13" % "test",
